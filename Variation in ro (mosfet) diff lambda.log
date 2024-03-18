@@ -1,0 +1,29 @@
+Circuit: * D:\Anu\CMOS\Variation in ro (mosfet) diff lambda.asc
+
+Instance "m1": Length shorter than recommended for a level 1 MOSFET.
+Vdd: Missing value, assumed 0V @ DC
+
+SPICE directive ".backanno" has no meaning for netlists.
+id: id(m1)=0.0002366 at 4
+r0: 1/d(id(m1))=157791 at 4
+ron: 1/d(id(m1))=4116.29 at 0.4
+idron: id(m1)=0.00011132 at 0.4
+
+
+Date: Mon Mar 18 21:18:41 2024
+Total elapsed time: 0.161 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 104
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 4
+fillins = 0
+solver = Normal
+Matrix Compiler1:       7 opcodes  0.0/[0.0]/0.0
+Matrix Compiler2: off  [0.0]/0.0/0.0
+
