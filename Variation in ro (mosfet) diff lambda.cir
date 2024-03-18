@@ -1,0 +1,25 @@
+* D:\Anu\CMOS\Variation in ro (mosfet) diff lambda.asc
+* Variation in  (output resistance) - Analog Mosfet exercise
+* Here VDD value is Varying from 0 to 5V, VGS is kept constant
+M1 D G 0 0 NMOS1
+VG G 0 2
+VDD D 0
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\Anumol\Documents\LTspiceXVII\lib\cmp\standard.mos
+
+.model nmos1 nmos (vto=0.7V L=2u W=10u lambda=0.03 kp=50u gamma=0.0 )
+.dc VDD 0 5 0.1
+.meas ID FIND Id(M1) WHEN V(D)=4V
+.meas r0 FIND 1/d(Id(M1)) WHEN V(D)=4V
+.meas ron FIND 1/d(Id(M1)) WHEN V(D)=0.4V
+.meas IDron FIND Id(M1) WHEN V(D)=0.4V
+
+
+.backanno
+.end
+
+*By Simulation
+* id: id(m1)=0.0002366 at 4\n
+*r0: 1/d(id(m1))=157791 at 4\nron: 1/d(id(m1))=4116.29 at 0.4\n
+*idron: id(m1)=0.00011132 at 0.4
